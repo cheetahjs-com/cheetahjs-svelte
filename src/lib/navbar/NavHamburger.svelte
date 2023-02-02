@@ -4,8 +4,9 @@
   import Menu from './Menu.svelte';
 
   export let btnClass: string = 'ml-3 md:hidden';
+  export let variation: 'solid' | 'outline' | 'ellipsis-horizontal' | 'ellipsis-vertical' = 'outline';
 </script>
 
 <ToolbarButton name="Open main menu" on:click {...$$restProps} class={classNames(btnClass, $$props.class)}>
-  <Menu class="h-6 w-6 shrink-0" />
+  <Menu class="h-6 w-6 shrink-0" {variation} />
 </ToolbarButton>

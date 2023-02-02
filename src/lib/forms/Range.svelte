@@ -1,7 +1,7 @@
 <script lang="ts">
   import classNames from 'classnames';
 
-  export let value: number;
+  export let value: number | undefined = undefined;
   export let size: 'sm' | 'md' | 'lg' = 'md';
 
   const sizes = {

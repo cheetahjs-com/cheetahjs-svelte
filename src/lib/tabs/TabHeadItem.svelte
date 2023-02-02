@@ -13,8 +13,10 @@
     [key: string]: string;
   };
 
-  const ctx = getContext<TabCtxType>('ctx') ?? {};
-  tabStyle = ctx.style;
+  const ctx = getContext<TabCtxType>('ctx');
+  if (ctx && ctx.style) {
+    tabStyle = ctx.style;
+  }
 
   const activeClasses: classOptions = {
     default:

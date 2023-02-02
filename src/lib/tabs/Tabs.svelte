@@ -2,6 +2,7 @@
   import { writable, type Writable } from 'svelte/store';
 
   export interface TabCtxType {
+    style: 'full' | 'pill' | 'underline' | 'default' | 'icon' | 'custom';
     activeClasses: string;
     inactiveClasses: string;
     selected: Writable<HTMLElement>;
